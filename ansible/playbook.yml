@@ -44,5 +44,10 @@
        name: openjdk-8-jdk
        state: latest
        update_cache: true
+
+    - name: copy jenkins agent file
+      copy:
+        src: /bin/agent.jar
+        dest: /home/ubuntu
         
 
