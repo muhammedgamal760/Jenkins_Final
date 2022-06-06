@@ -47,7 +47,7 @@
 
     - name: copy jenkins agent file
       copy:
-        src: /bin/agent.jar
+        src: /agent/agent.jar
         dest: /home/ubuntu
         
 
