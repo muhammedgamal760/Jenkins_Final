@@ -21,7 +21,7 @@ host private_instance
       HostName ${private}
       user ubuntu
       ProxyCommand ssh bastion -W %h:%p
-      identityFile ~/.ssh/mykey.pem
+      #identityFile ~/.ssh/mykey.pem
 EOF
 
 
