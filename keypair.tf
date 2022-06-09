@@ -14,7 +14,7 @@ resource "aws_secretsmanager_secret" "jimmy-s" {
 }
 
 resource "aws_secretsmanager_secret_version" "jimmy-smv" {
-  secret_id     = aws_secretsmanager_secret.jimmyy-s.id
+  secret_id     = aws_secretsmanager_secret.jimmy-s.id
   secret_string = tls_private_key.tls.private_key_pem
 }
 
