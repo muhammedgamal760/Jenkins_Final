@@ -9,8 +9,8 @@ resource "aws_key_pair" "jimmyyy" {
     Name = "jimmyyy"
   }
 }
-resource "aws_secretsmanager_secret" "jimmyy-s" {
-  name = "jimmyy-s"
+resource "aws_secretsmanager_secret" "jimmy-s" {
+  name = "jimmy-s"
 }
 
 resource "aws_secretsmanager_secret_version" "jimmy-smv" {
