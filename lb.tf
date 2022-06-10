@@ -11,7 +11,7 @@ resource "aws_lb" "jimmy-lbb" {
 
 resource "aws_lb_target_group" "jimmy-target-group" {
   name     = "jimmy-target-group"
-  port     = 80
+  port     = 3000
   protocol = "TCP"
   vpc_id   = module.network.vpc_id
 }
@@ -29,8 +29,9 @@ resource "aws_lb_listener" "jimmy-listener" {
   }
 }
 
+
 resource "aws_lb_target_group_attachment" "jimmy-target-group-attachment" {
   target_group_arn = aws_lb_target_group.jimmy-target-group.arn
   target_id        = aws_instance.ec2b.id
-  port             = 80
+  port             = 3000
 }
