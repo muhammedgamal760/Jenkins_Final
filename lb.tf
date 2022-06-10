@@ -1,5 +1,5 @@
-resource "aws_lb" "jimmy-lb" {
-  name               = "jimmy-lb"
+resource "aws_lb" "jimmy-lbb" {
+  name               = "jimmy-lbb"
   internal           = false
   load_balancer_type = "network"
   subnets            = [module.network.private_subnet_one_id]
@@ -17,7 +17,7 @@ resource "aws_lb_target_group" "jimmy-target-group" {
 }
 
 resource "aws_lb_listener" "jimmy-listener" {
-  load_balancer_arn = aws_lb.jimmy-lb.arn
+  load_balancer_arn = aws_lb.jimmy-lbb.arn
   port              = "80"
   protocol          = "TCP"
   certificate_arn   = "arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4"
