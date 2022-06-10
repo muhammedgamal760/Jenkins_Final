@@ -15,7 +15,7 @@ resource "aws_lb_target_group" "jimmy-target-group" {
   name     = "jimmy-target-group"
   port     = 80
   protocol = "HTTP"
-  vpc_id   = aws_vpc.jimmy_vpc.id
+  vpc_id   = module.network.vpc_id
 }
 
 resource "aws_lb_target_group_attachment" "jimmy-target-group-attachment" {
