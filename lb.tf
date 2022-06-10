@@ -12,7 +12,7 @@ resource "aws_lb" "jimmy-lb" {
 resource "aws_lb_target_group" "jimmy-target-group" {
   name     = "jimmy-target-group"
   port     = 80
-  protocol = "HTTP"
+  protocol = "TCP"
   vpc_id   = module.network.vpc_id
 }
 
