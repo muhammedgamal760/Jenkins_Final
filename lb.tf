@@ -4,8 +4,6 @@ resource "aws_lb" "jimmy-lb" {
   load_balancer_type = "network"
   subnets            = [module.network.private_subnet_one_id]
 
-  enable_deletion_protection = false
-
   tags = {
     Environment = "production"
   }
@@ -20,8 +18,8 @@ resource "aws_lb_target_group" "jimmy-target-group" {
 
 resource "aws_lb_listener" "jimmy-listener" {
   load_balancer_arn = aws_lb.jimmy-lb.arn
-  port              = "443"
-  protocol          = "TLS"
+  port              = "80"
+  protocol          = "TCP"
   certificate_arn   = "arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4"
   alpn_policy       = "HTTP2Preferred"
 
