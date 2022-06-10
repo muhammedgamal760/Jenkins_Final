@@ -2,7 +2,7 @@ resource "aws_lb" "jimmy-lb" {
   name               = "jimmy-lb"
   internal           = false
   load_balancer_type = "network"
-  subnets            = [for subnet in aws_subnet.public : jimmy_private_subnet_one.id]
+  subnets            = ["jimmy_private_subnet_one.id"]
 
   enable_deletion_protection = true
 
