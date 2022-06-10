@@ -4,7 +4,7 @@ resource "aws_lb" "jimmy-lb" {
   load_balancer_type = "network"
   subnets            = [module.network.private_subnet_one_id]
 
-  enable_deletion_protection = true
+  enable_deletion_protection = false
 
   tags = {
     Environment = "production"
