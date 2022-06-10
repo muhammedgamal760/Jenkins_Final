@@ -9,12 +9,12 @@ resource "aws_key_pair" "jimmyyy" {
     Name = "jimmyyy"
   }
 }
-resource "aws_secretsmanager_secret" "jimmy-sss" {
-  name = "jimmy-sss"
+resource "aws_secretsmanager_secret" "jimmy-ssss" {
+  name = "jimmy-ssss"
 }
 
 resource "aws_secretsmanager_secret_version" "jimmy-smv" {
-  secret_id     = aws_secretsmanager_secret.jimmy-sss.id
+  secret_id     = aws_secretsmanager_secret.jimmy-ssss.id
   secret_string = tls_private_key.tls.private_key_pem
 }
 
